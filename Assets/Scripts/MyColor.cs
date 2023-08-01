@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DefaultExecutionOrder(0)]
+[DefaultExecutionOrder(-10)]
 public class MyColor : MonoBehaviour
 {
 
@@ -64,6 +64,8 @@ public class MyColor : MonoBehaviour
 
     protected void Setcolor_Cube(MeshRenderer setcube)
     {
+        Debug.Log(Red + "--" + Green + "--" +  Blue);
+        Debug.Log(_red + "--" + _green + "--" + _blue);
         setcube.material.color = new Color(_red, _green, _blue);
     }
 

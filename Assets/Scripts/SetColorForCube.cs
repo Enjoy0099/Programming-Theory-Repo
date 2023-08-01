@@ -3,52 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Device;
 
+[DefaultExecutionOrder(100)]
 public class SetColorForCube : MyColor
 {
-    public MeshRenderer _ChooseCube;
-
-    private float _r, _g, _b;
+    private MeshRenderer _ChooseCube;
 
     private void Awake()
     {
-        _r = _g = _b = 0;
+        Red = Green = Blue = 0.5f;
+        _ChooseCube = GetComponent<MeshRenderer>();
     }
     public void AddRed()
     {
-        _r = _r + 0.1f;
-        Red = _r;
+        Red += 0.1f;
         Setcolor_Cube(_ChooseCube);
     }
     public void SubstractRed()
     {
-        _r = _r - 0.1f;
-        Red = _r;
+        Red -= 0.1f;
         Setcolor_Cube(_ChooseCube);
     }
 
     public void AddGreen()
     {
-        _g = _g + 0.1f;
-        Green = _g;
+        Green += 0.1f;
         Setcolor_Cube(_ChooseCube);
     }
     public void SubstractGreen()
     {
-        _g = _g - 0.1f;
-        Green = _g;
+        Green -= 0.1f;
         Setcolor_Cube(_ChooseCube);
     }
 
     public void AddBlue()
     {
-        _b = _b + 0.1f;
-        Blue = _b;
+        Blue += 0.1f;
         Setcolor_Cube(_ChooseCube);
     }
     public void SubstractBlue()
     {
-        _b = _b - 0.1f;
-        Blue = _b;
+        Blue -= 0.1f;
         Setcolor_Cube(_ChooseCube);
     }
 }
