@@ -76,4 +76,9 @@ public class UiManager : GameManager
     }
 
 
+    public void BackToStartMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
 }
